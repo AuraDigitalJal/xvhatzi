@@ -853,54 +853,124 @@ body{isolation:isolate;overflow-wrap:anywhere}
 }
 
 
-/* Corrección visual de nombre de mamá sobre el banner original */
-.family-banner{
+
+/* Sección nativa de papás y padrinos · reemplaza el banner raster anterior */
+.family-card{
   position:relative;
-  height:auto!important;
-  min-height:0!important;
-  aspect-ratio:3/2;
-  background:none!important;
-  overflow:hidden!important;
-}
-.family-banner::after{content:none!important}
-.family-banner>img{
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-}
-.family-name-fix{
-  position:absolute;
-  left:50%;
-  top:46.4%;
-  width:76%;
-  padding:.5% 2% .8%;
-  transform:translate(-50%,-50%);
+  width:min(100%,680px);
+  margin:30px auto 34px;
+  padding:clamp(34px,7vw,58px) clamp(22px,5vw,48px);
+  overflow:hidden;
+  border-radius:18px;
   text-align:center;
-  color:#4b2724;
-  font-family:'Italiana',serif;
-  font-size:clamp(17px,3.5vw,25px);
-  font-weight:400;
-  line-height:1.1;
-  letter-spacing:-.01em;
-  background:rgba(247,231,224,.93);
-  -webkit-backdrop-filter:blur(10px);
-  backdrop-filter:blur(10px);
-  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 10%,#000 90%,transparent 100%);
-  mask-image:linear-gradient(90deg,transparent 0,#000 10%,#000 90%,transparent 100%);
-  text-shadow:0 1px 0 rgba(255,255,255,.35);
+  background:
+    radial-gradient(circle at 10% 12%,rgba(255,255,255,.58) 0 2%,transparent 19%),
+    radial-gradient(circle at 90% 70%,rgba(255,255,255,.42) 0 2%,transparent 22%),
+    linear-gradient(135deg,rgba(248,225,216,.97),rgba(250,235,229,.94) 46%,rgba(240,205,194,.92));
+  box-shadow:0 18px 48px rgba(103,63,65,.055);
+  isolation:isolate;
+}
+.family-card::before,
+.family-card::after{
+  content:'';
+  position:absolute;
+  z-index:-1;
+  width:82%;
+  height:54%;
+  border:1px solid rgba(255,255,255,.44);
+  border-radius:50%;
+  filter:blur(.2px);
   pointer-events:none;
 }
+.family-card::before{
+  left:-34%;
+  top:-17%;
+  transform:rotate(-14deg);
+  box-shadow:
+    0 10px 0 rgba(255,255,255,.15),
+    0 24px 0 rgba(255,255,255,.11),
+    0 38px 0 rgba(184,120,122,.045);
+}
+.family-card::after{
+  right:-33%;
+  bottom:-17%;
+  transform:rotate(18deg);
+  box-shadow:
+    0 -10px 0 rgba(255,255,255,.15),
+    0 -24px 0 rgba(255,255,255,.11),
+    0 -38px 0 rgba(184,120,122,.04);
+}
+.family-block{position:relative}
+.family-godparents{margin-top:clamp(48px,8vw,72px)}
+.family-card h2{
+  margin:0;
+  font-family:var(--display);
+  font-size:clamp(31px,7vw,52px);
+  font-weight:400;
+  line-height:1;
+  letter-spacing:.18em;
+  color:#8e4c43;
+  text-shadow:0 1px 0 rgba(255,255,255,.45);
+}
+.family-ornament{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:min(72%,360px);
+  margin:16px auto 20px;
+  color:#d07e68;
+}
+.family-ornament span{
+  height:1px;
+  flex:1;
+  background:linear-gradient(90deg,transparent,rgba(208,126,104,.72));
+}
+.family-ornament span:last-child{
+  background:linear-gradient(90deg,rgba(208,126,104,.72),transparent);
+}
+.family-ornament b{
+  font:400 20px/1 var(--display);
+  transform:rotate(45deg);
+}
+.family-intro{
+  margin:0 auto 10px;
+  max-width:36ch;
+  color:#4b2f2c;
+  font:400 clamp(15px,3.6vw,22px)/1.5 var(--display);
+}
+.family-names{
+  margin:0;
+  color:#3f2624;
+  font:400 clamp(20px,4.7vw,31px)/1.35 var(--display);
+  letter-spacing:-.01em;
+}
 @media(max-width:480px){
-  .family-name-fix{
-    top:46.5%;
-    width:82%;
-    font-size:clamp(15px,4.9vw,19px);
+  .family-card{
+    width:100%;
+    margin:24px auto 28px;
+    padding:32px 18px 36px;
+    border-radius:16px;
   }
+  .family-card h2{font-size:clamp(27px,8vw,38px);letter-spacing:.13em}
+  .family-godparents{margin-top:44px}
+  .family-intro{font-size:16px}
+  .family-names{font-size:21px}
 }
 
-</style></head><body class="theme-xv_couture event-xv design-xv"><div class="invitation-background" aria-hidden="true"><img src="assets/fondo.jpg?v=muxoqdnb" alt="" decoding="async"><div class="background-veil"></div></div><header class="hero cover-theme" data-order="classic" data-offset="0"><div class="hero-media"></div><div class="hero-overlay"></div><div class="hatzi-name-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="hero-inner"></div><div class="scroll-note">Desliza para descubrir</div></header><main class="page"><figure class="banner-media reveal banner-auto banner-main" aria-label="Banner principal"><img src="assets/banner.png?v=muxoqdnb" alt="Banner principal" loading="lazy"></figure><div class="content"><div class="banner reveal banner-horizontal family-banner" role="img" aria-label="Papás y padrinos"><img src="assets/banner-extra.png?v=muxoqdnb" alt="Papás y padrinos" loading="lazy"><div class="family-name-fix">Mayra Hernández Valdés</div></div><section class="section center reveal date-section"><div class="section-label">Cuenta regresiva para mis XV</div><h2 data-edit="countdownLabel"></h2><div class="countdown countdown-simple" data-date="2026-11-14T18:00"><div class="count-item"><b data-d>00</b><span>Días</span></div><div class="count-item"><b data-h>00</b><span>Horas</span></div><div class="count-item"><b data-m>00</b><span>Min</span></div><div class="count-item"><b data-s>00</b><span>Seg</span></div></div></section><section class="section reveal"><div class="section-label">Dónde será</div><h2 data-edit="locationsHeadingSize">Nos vemos aquí.</h2><div class="ornament"></div><div class="locations"><div class="location-card map-mode-toggle"><div class="location-head"><div class="location-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v4"></path><path d="M10.5 5h3"></path><path d="M5.5 10.5 12 6l6.5 4.5"></path><path d="M7.5 10.5V19"></path><path d="M16.5 10.5V19"></path><path d="M5 19h14"></path><path d="M10 19v-4.5h4V19"></path></svg></div><div class="location-copy"><small data-edit="ceremonyText">Ceremonia religiosa</small><strong data-edit="ceremonyText">Parroquia San Pablo Apóstol (Balcones)</strong></div><button class="map-toggle" type="button" aria-expanded="false" aria-controls="map-ceremony"><span>Ver mapa</span><span class="map-toggle-icon">＋</span></button><div class="map-disclosure" id="map-ceremony"><div class="map-disclosure-inner"><div class="map-preview"><iframe data-src="https://www.google.com/maps?q=19.4310007%2C-102.04305&amp;hl=es&amp;t=m&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa de Parroquia San Pablo Apóstol (Balcones)"></iframe></div><a class="map-external" href="https://maps.app.goo.gl/qEZeBQNSsHdzKkzGA" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div></div></div></div><div class="location-card map-mode-toggle"><div class="location-head"><div class="location-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4h5l-.6 5.2A4 4 0 0 1 6.4 13H6a4 4 0 0 1-4-3.8L1.5 4H6Z"></path><path d="M6.5 13v5"></path><path d="M4 20h5"></path><path d="M18 4h5l-.5 5.2A4 4 0 0 1 18.5 13H18a4 4 0 0 1-4-3.8L13.5 4H18Z"></path><path d="M18.5 13v5"></path><path d="M16 20h5"></path></svg></div><div class="location-copy"><small data-edit="receptionText">Recepción</small><strong data-edit="receptionText">Salón Los Tomates (Camino a Santa Rosa #88)</strong></div><button class="map-toggle" type="button" aria-expanded="false" aria-controls="map-reception"><span>Ver mapa</span><span class="map-toggle-icon">＋</span></button><div class="map-disclosure" id="map-reception"><div class="map-disclosure-inner"><div class="map-preview"><iframe data-src="https://www.google.com/maps?q=19.3825117%2C-102.0420249&amp;hl=es&amp;t=m&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa de Salón Los Tomates (Camino a Santa Rosa #88)"></iframe></div><a class="map-external" href="https://maps.app.goo.gl/5K39QbzVGXHgtajHA" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div></div></div></div></div></section><section class="aura-music-card reveal" aria-label="Reproductor de música">
+</style></head><body class="theme-xv_couture event-xv design-xv"><div class="invitation-background" aria-hidden="true"><img src="assets/fondo.jpg?v=muxoqdnb" alt="" decoding="async"><div class="background-veil"></div></div><header class="hero cover-theme" data-order="classic" data-offset="0"><div class="hero-media"></div><div class="hero-overlay"></div><div class="hatzi-name-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="hero-inner"></div><div class="scroll-note">Desliza para descubrir</div></header><main class="page"><figure class="banner-media reveal banner-auto banner-main" aria-label="Banner principal"><img src="assets/banner.png?v=muxoqdnb" alt="Banner principal" loading="lazy"></figure><div class="content"><section class="family-card reveal" aria-label="Papás y padrinos">
+  <div class="family-block">
+    <h2>MIS PAPÁS</h2>
+    <div class="family-ornament" aria-hidden="true"><span></span><b>◇</b><span></span></div>
+    <p class="family-intro">Acompáñame en este día tan especial junto a mis padres</p>
+    <p class="family-names">Arturo Contreras Farías<br>Mayra Hernández Valdés</p>
+  </div>
+  <div class="family-block family-godparents">
+    <h2>MIS PADRINOS</h2>
+    <div class="family-ornament" aria-hidden="true"><span></span><b>◇</b><span></span></div>
+    <p class="family-names">Kate Ileana Alfaro Contreras<br>Brandon Enrique Alfaro Contreras</p>
+  </div>
+</section><section class="section center reveal date-section"><div class="section-label">Cuenta regresiva para mis XV</div><h2 data-edit="countdownLabel"></h2><div class="countdown countdown-simple" data-date="2026-11-14T18:00"><div class="count-item"><b data-d>00</b><span>Días</span></div><div class="count-item"><b data-h>00</b><span>Horas</span></div><div class="count-item"><b data-m>00</b><span>Min</span></div><div class="count-item"><b data-s>00</b><span>Seg</span></div></div></section><section class="section reveal"><div class="section-label">Dónde será</div><h2 data-edit="locationsHeadingSize">Nos vemos aquí.</h2><div class="ornament"></div><div class="locations"><div class="location-card map-mode-toggle"><div class="location-head"><div class="location-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v4"></path><path d="M10.5 5h3"></path><path d="M5.5 10.5 12 6l6.5 4.5"></path><path d="M7.5 10.5V19"></path><path d="M16.5 10.5V19"></path><path d="M5 19h14"></path><path d="M10 19v-4.5h4V19"></path></svg></div><div class="location-copy"><small data-edit="ceremonyText">Ceremonia religiosa</small><strong data-edit="ceremonyText">Parroquia San Pablo Apóstol (Balcones)</strong></div><button class="map-toggle" type="button" aria-expanded="false" aria-controls="map-ceremony"><span>Ver mapa</span><span class="map-toggle-icon">＋</span></button><div class="map-disclosure" id="map-ceremony"><div class="map-disclosure-inner"><div class="map-preview"><iframe data-src="https://www.google.com/maps?q=19.4310007%2C-102.04305&amp;hl=es&amp;t=m&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa de Parroquia San Pablo Apóstol (Balcones)"></iframe></div><a class="map-external" href="https://maps.app.goo.gl/qEZeBQNSsHdzKkzGA" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div></div></div></div><div class="location-card map-mode-toggle"><div class="location-head"><div class="location-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4h5l-.6 5.2A4 4 0 0 1 6.4 13H6a4 4 0 0 1-4-3.8L1.5 4H6Z"></path><path d="M6.5 13v5"></path><path d="M4 20h5"></path><path d="M18 4h5l-.5 5.2A4 4 0 0 1 18.5 13H18a4 4 0 0 1-4-3.8L13.5 4H18Z"></path><path d="M18.5 13v5"></path><path d="M16 20h5"></path></svg></div><div class="location-copy"><small data-edit="receptionText">Recepción</small><strong data-edit="receptionText">Salón Los Tomates (Camino a Santa Rosa #88)</strong></div><button class="map-toggle" type="button" aria-expanded="false" aria-controls="map-reception"><span>Ver mapa</span><span class="map-toggle-icon">＋</span></button><div class="map-disclosure" id="map-reception"><div class="map-disclosure-inner"><div class="map-preview"><iframe data-src="https://www.google.com/maps?q=19.3825117%2C-102.0420249&amp;hl=es&amp;t=m&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa de Salón Los Tomates (Camino a Santa Rosa #88)"></iframe></div><a class="map-external" href="https://maps.app.goo.gl/5K39QbzVGXHgtajHA" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div></div></div></div></div></section><section class="aura-music-card reveal" aria-label="Reproductor de música">
   <div class="aura-music-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
   <div class="aura-music-copy">
     <span class="aura-music-kicker">Ahora suena</span>
