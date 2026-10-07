@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="es"><head><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><meta name="aura-publication-version" content="hatzi-map-v1"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eadcda"><meta property="og:type" content="website"><meta property="og:title" content="X V Años Hatzi 14/11/2026"><meta property="og:description" content="Estás invitado a celebrar conmigo"><meta property="og:url" content="https://auradigitaljal.com/xvhatzi/"><link rel="canonical" href="https://auradigitaljal.com/xvhatzi/"><meta property="og:image" content="https://auradigitaljal.com/xvhatzi/assets/whatsapp-preview.jpg?v=muxoqdn4"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content="X V Años Hatzi 14/11/2026"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://auradigitaljal.com/xvhatzi/assets/whatsapp-preview.jpg?v=muxoqdn4"><title></title><style>
+<!DOCTYPE html><html lang="es"><head><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><meta name="aura-publication-version" content="hatzi-continuidad-v1"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eadcda"><meta property="og:type" content="website"><meta property="og:title" content="X V Años Hatzi 14/11/2026"><meta property="og:description" content="Estás invitado a celebrar conmigo"><meta property="og:url" content="https://auradigitaljal.com/xvhatzi/"><link rel="canonical" href="https://auradigitaljal.com/xvhatzi/"><meta property="og:image" content="https://auradigitaljal.com/xvhatzi/assets/whatsapp-preview.jpg?v=muxoqdn4"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content="X V Años Hatzi 14/11/2026"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://auradigitaljal.com/xvhatzi/assets/whatsapp-preview.jpg?v=muxoqdn4"><title></title><style>
 @font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/manrope-latin-400-normal.woff2') format('woff2')}
 @font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/manrope-latin-500-normal.woff2') format('woff2')}
 @font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/manrope-latin-600-normal.woff2') format('woff2')}
@@ -329,6 +329,137 @@ body{isolation:isolate;overflow-wrap:anywhere}
 .aura-music-play.is-playing .aura-music-play-icon::before{opacity:0;transform:scale(.7)}
 .aura-music-play.is-playing .aura-music-play-icon::after{opacity:1}
 @media(max-width:430px){.aura-music-card{grid-template-columns:56px minmax(0,1fr) 44px;gap:12px;padding:13px 14px}.aura-music-art{width:56px}.aura-music-title{font-size:18px}.aura-music-play{width:42px;height:42px}.aura-music-progress-row{grid-template-columns:27px minmax(0,1fr) 27px;gap:5px}}
+
+
+/* =========================================================
+   PREVIEW · continuidad visual Hatzi
+   Solo composición/ritmo. No cambia paleta, textos ni assets.
+   ========================================================= */
+.content{
+  position:relative;
+  isolation:isolate;
+  padding-top:56px;
+  padding-bottom:72px;
+}
+.content::before{
+  content:'';
+  position:absolute;
+  inset:0 -7vw;
+  z-index:-2;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 7% 18%,rgba(184,120,122,.055) 0,rgba(184,120,122,0) 34%),
+    radial-gradient(ellipse at 94% 48%,rgba(251,245,242,.22) 0,rgba(251,245,242,0) 31%),
+    radial-gradient(ellipse at 13% 78%,rgba(184,120,122,.04) 0,rgba(184,120,122,0) 32%);
+}
+.content::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  top:24px;
+  bottom:30px;
+  width:1px;
+  transform:translateX(-50%);
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(
+    to bottom,
+    transparent 0,
+    rgba(184,120,122,.14) 7%,
+    rgba(184,120,122,.22) 48%,
+    rgba(184,120,122,.14) 91%,
+    transparent 100%
+  );
+}
+.content>.section,
+.content>.aura-music-card{
+  width:min(100%,640px);
+  margin-left:auto;
+  margin-right:auto;
+}
+.content>.section{
+  margin-bottom:18px;
+}
+.content>section:has(.locations){
+  margin-bottom:10px;
+  border-radius:20px 20px 12px 12px;
+}
+.content>.aura-music-card{
+  margin-top:0;
+  margin-bottom:28px;
+  border-radius:12px 12px 20px 20px;
+}
+.content>section:has(.locations)::after,
+.content>.aura-music-card::before{
+  content:'';
+  position:absolute;
+  left:50%;
+  width:36px;
+  height:1px;
+  transform:translateX(-50%);
+  background:var(--accent);
+  opacity:.24;
+  pointer-events:none;
+}
+.content>section:has(.locations)::after{bottom:-6px}
+.content>.aura-music-card::before{top:-6px}
+.content>.banner,
+.content>.banner-media{
+  position:relative;
+  margin-top:30px;
+  margin-bottom:34px;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 6%,#000 94%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0,#000 6%,#000 94%,transparent 100%);
+}
+.page>.banner-main{
+  margin-bottom:0;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0,#000 88%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0,#000 88%,transparent 100%);
+}
+.content>.banner-horizontal{
+  border-radius:18px;
+}
+.content>.banner-media img{
+  border-radius:16px;
+}
+.content>.gallery-section{
+  margin-top:2px;
+}
+.content>.gallery-section .gallery{
+  position:relative;
+}
+.content>.gallery-section .gallery::before{
+  content:'';
+  display:block;
+  width:42px;
+  height:1px;
+  margin:0 auto 24px;
+  background:var(--accent);
+  opacity:.35;
+}
+.content>.section:last-child{
+  margin-top:10px;
+  padding-top:46px;
+  padding-bottom:46px;
+}
+.content>.section:last-child::before{
+  content:'';
+  position:absolute;
+  top:20px;
+  left:50%;
+  width:54px;
+  height:1px;
+  transform:translateX(-50%);
+  background:var(--accent);
+  opacity:.32;
+}
+@media(max-width:480px){
+  .content{padding-top:44px;padding-bottom:60px}
+  .content>.section{margin-bottom:14px}
+  .content>section:has(.locations){margin-bottom:8px}
+  .content>.aura-music-card{margin-bottom:24px}
+  .content>.banner,.content>.banner-media{margin-top:24px;margin-bottom:28px}
+}
 
 </style></head><body class="theme-xv_couture event-xv design-xv"><div class="invitation-background" aria-hidden="true"><img src="assets/fondo.jpg?v=muxoqdnb" alt="" decoding="async"><div class="background-veil"></div></div><header class="hero cover-theme" data-order="classic" data-offset="0"><div class="hero-media"></div><div class="hero-overlay"></div><div class="hero-inner"></div><div class="scroll-note">Desliza para descubrir</div></header><main class="page"><figure class="banner-media reveal banner-auto banner-main" aria-label="Banner principal"><img src="assets/banner.png?v=muxoqdnb" alt="Banner principal" loading="lazy"></figure><div class="content"><div class="banner reveal banner-horizontal " style="background-image:url('assets/banner-extra.png?v=muxoqdnb')" role="img" aria-label="Banner extra"></div><section class="section center reveal date-section"><div class="section-label">Save the date</div><h2 data-edit="countdownLabel"></h2><div class="countdown countdown-simple" data-date="2026-11-14T18:00"><div class="count-item"><b data-d>00</b><span>Días</span></div><div class="count-item"><b data-h>00</b><span>Horas</span></div><div class="count-item"><b data-m>00</b><span>Min</span></div><div class="count-item"><b data-s>00</b><span>Seg</span></div></div></section><section class="section reveal"><div class="section-label">Dónde será</div><h2 data-edit="locationsHeadingSize">Nos vemos aquí.</h2><div class="ornament"></div><div class="locations"><div class="location-card map-mode-toggle"><div class="location-head"><div><small data-edit="ceremonyText">Ceremonia religiosa</small><strong data-edit="ceremonyText">Parroquia San Pablo Apóstol (Balcones)</strong></div><button class="map-toggle" type="button" aria-expanded="false" aria-controls="map-ceremony"><span>Ver mapa</span><span class="map-toggle-icon">＋</span></button><div class="map-disclosure" id="map-ceremony"><div class="map-disclosure-inner"><div class="map-preview"><iframe data-src="https://www.google.com/maps?q=19.4310007%2C-102.04305&amp;hl=es&amp;t=m&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa de Parroquia San Pablo Apóstol (Balcones)"></iframe></div><a class="map-external" href="https://maps.app.goo.gl/qEZeBQNSsHdzKkzGA" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div></div></div></div><div class="location-card map-mode-toggle"><div class="location-head"><div><small data-edit="receptionText">Recepción</small><strong data-edit="receptionText">Salón Los Tomates (Camino a Santa Rosa #88)</strong></div><button class="map-toggle" type="button" aria-expanded="false" aria-controls="map-reception"><span>Ver mapa</span><span class="map-toggle-icon">＋</span></button><div class="map-disclosure" id="map-reception"><div class="map-disclosure-inner"><div class="map-preview"><iframe data-src="https://www.google.com/maps?q=19.3825117%2C-102.0420249&amp;hl=es&amp;t=m&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa de Salón Los Tomates (Camino a Santa Rosa #88)"></iframe></div><a class="map-external" href="https://maps.app.goo.gl/5K39QbzVGXHgtajHA" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div></div></div></div></div></section><section class="aura-music-card reveal" aria-label="Reproductor de música">
   <div class="aura-music-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
