@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="es"><head><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><meta name="aura-publication-version" content="hatzi-scrolltext-v1"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eadcda"><meta property="og:type" content="website"><meta property="og:title" content="X V Años Hatzi 14/11/2026"><meta property="og:description" content="Estás invitado a celebrar conmigo"><meta property="og:url" content="https://auradigitaljal.com/xvhatzi/"><link rel="canonical" href="https://auradigitaljal.com/xvhatzi/"><meta property="og:image" content="https://auradigitaljal.com/xvhatzi/assets/whatsapp-preview.jpg?v=muxoqdn4"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content="X V Años Hatzi 14/11/2026"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://auradigitaljal.com/xvhatzi/assets/whatsapp-preview.jpg?v=muxoqdn4"><title></title><style>
+<!DOCTYPE html><html lang="es"><head><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><meta name="aura-publication-version" content="hatzi-countdown-organic-v1"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eadcda"><meta property="og:type" content="website"><meta property="og:title" content="X V Años Hatzi 14/11/2026"><meta property="og:description" content="Estás invitado a celebrar conmigo"><meta property="og:url" content="https://auradigitaljal.com/xvhatzi/"><link rel="canonical" href="https://auradigitaljal.com/xvhatzi/"><meta property="og:image" content="https://auradigitaljal.com/xvhatzi/assets/whatsapp-preview.jpg?v=muxoqdn4"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:alt" content="X V Años Hatzi 14/11/2026"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://auradigitaljal.com/xvhatzi/assets/whatsapp-preview.jpg?v=muxoqdn4"><title></title><style>
 @font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/manrope-latin-400-normal.woff2') format('woff2')}
 @font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/manrope-latin-500-normal.woff2') format('woff2')}
 @font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/manrope-latin-600-normal.woff2') format('woff2')}
@@ -726,6 +726,103 @@ body{isolation:isolate;overflow-wrap:anywhere}
 @media(prefers-reduced-motion:reduce){
   .hatzi-name-sparkles i{animation:none;opacity:.18}
   .scroll-note{animation:none!important;opacity:.92!important;transform:translate(-50%,0)!important}
+}
+
+
+/* Cuenta regresiva · orgánica premium, sin líneas tipo púas */
+.date-section .countdown.countdown-simple{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px!important;
+  margin-top:28px!important;
+  padding:18px 16px!important;
+  border:0!important;
+  border-radius:28px!important;
+  background:color-mix(in srgb,var(--card) 86%,transparent)!important;
+  box-shadow:
+    0 16px 42px rgba(103,63,65,.055),
+    inset 0 1px 0 rgba(255,255,255,.42);
+  -webkit-backdrop-filter:blur(12px) saturate(110%);
+  backdrop-filter:blur(12px) saturate(110%);
+  overflow:visible;
+}
+
+/* anula todos los remates filosos anteriores */
+.date-section .countdown.countdown-simple::before,
+.date-section .countdown.countdown-simple::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  width:88px!important;
+  height:15px!important;
+  transform:translateX(-50%);
+  opacity:.42!important;
+  pointer-events:none;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+  background-size:contain!important;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 88 15'%3E%3Cpath d='M7 9 C19 8 25 5 31 4 C36 3 40 5 44 8 C48 5 52 3 57 4 C63 5 69 8 81 9' fill='none' stroke='%23b8787a' stroke-opacity='.5' stroke-width='1'/%3E%3Cpath d='M39 8 C40.5 5.5 42 4.5 44 4.5 C46 4.5 47.5 5.5 49 8 C47 10 46 11 44 12 C42 11 41 10 39 8Z' fill='none' stroke='%23b8787a' stroke-opacity='.48' stroke-width='1'/%3E%3C/svg%3E")!important;
+}
+.date-section .countdown.countdown-simple::before{top:-11px!important}
+.date-section .countdown.countdown-simple::after{bottom:-11px!important;transform:translateX(-50%) rotate(180deg)}
+
+.date-section .countdown.countdown-simple .count-item{
+  position:relative;
+  min-width:0;
+  padding:16px 6px 14px!important;
+  border:0!important;
+  border-radius:20px!important;
+  background:rgba(255,255,255,.14)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.26);
+}
+.date-section .countdown.countdown-simple .count-item + .count-item{
+  border-left:0!important;
+}
+
+/* separador en forma de pequeño pétalo, no línea */
+.date-section .countdown.countdown-simple .count-item:not(:last-child)::after{
+  content:'';
+  position:absolute;
+  right:-8px!important;
+  top:50%!important;
+  width:16px!important;
+  height:16px!important;
+  transform:translateY(-50%)!important;
+  opacity:.44!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+  background-size:contain!important;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 3 C9.8 4.4 10.6 6 10.4 8 C10.2 10 9.2 11.5 8 13 C6.8 11.5 5.8 10 5.6 8 C5.4 6 6.2 4.4 8 3Z' fill='none' stroke='%23b8787a' stroke-opacity='.62' stroke-width='1'/%3E%3Cpath d='M4.5 8 C6 6.9 7 6.5 8 6.5 C9 6.5 10 6.9 11.5 8' fill='none' stroke='%23b8787a' stroke-opacity='.42' stroke-width='1'/%3E%3C/svg%3E")!important;
+}
+
+.date-section .countdown.countdown-simple .count-item b{
+  font-size:clamp(29px,8vw,38px)!important;
+  font-weight:400!important;
+  letter-spacing:.01em!important;
+}
+.date-section .countdown.countdown-simple .count-item span{
+  margin-top:8px!important;
+  font-size:7.5px!important;
+  letter-spacing:.17em!important;
+  color:var(--muted)!important;
+}
+
+@media(max-width:480px){
+  .date-section .countdown.countdown-simple{
+    gap:7px!important;
+    padding:15px 10px!important;
+    border-radius:24px!important;
+  }
+  .date-section .countdown.countdown-simple .count-item{
+    padding:14px 3px 12px!important;
+    border-radius:17px!important;
+  }
+  .date-section .countdown.countdown-simple .count-item:not(:last-child)::after{
+    right:-6px!important;
+    width:13px!important;
+    height:13px!important;
+  }
 }
 
 </style></head><body class="theme-xv_couture event-xv design-xv"><div class="invitation-background" aria-hidden="true"><img src="assets/fondo.jpg?v=muxoqdnb" alt="" decoding="async"><div class="background-veil"></div></div><header class="hero cover-theme" data-order="classic" data-offset="0"><div class="hero-media"></div><div class="hero-overlay"></div><div class="hatzi-name-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="hero-inner"></div><div class="scroll-note">Desliza para descubrir</div></header><main class="page"><figure class="banner-media reveal banner-auto banner-main" aria-label="Banner principal"><img src="assets/banner.png?v=muxoqdnb" alt="Banner principal" loading="lazy"></figure><div class="content"><div class="banner reveal banner-horizontal " style="background-image:url('assets/banner-extra.png?v=muxoqdnb')" role="img" aria-label="Banner extra"></div><section class="section center reveal date-section"><div class="section-label">Cuenta regresiva para mis XV</div><h2 data-edit="countdownLabel"></h2><div class="countdown countdown-simple" data-date="2026-11-14T18:00"><div class="count-item"><b data-d>00</b><span>Días</span></div><div class="count-item"><b data-h>00</b><span>Horas</span></div><div class="count-item"><b data-m>00</b><span>Min</span></div><div class="count-item"><b data-s>00</b><span>Seg</span></div></div></section><section class="section reveal"><div class="section-label">Dónde será</div><h2 data-edit="locationsHeadingSize">Nos vemos aquí.</h2><div class="ornament"></div><div class="locations"><div class="location-card map-mode-toggle"><div class="location-head"><div class="location-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v4"></path><path d="M10.5 5h3"></path><path d="M5.5 10.5 12 6l6.5 4.5"></path><path d="M7.5 10.5V19"></path><path d="M16.5 10.5V19"></path><path d="M5 19h14"></path><path d="M10 19v-4.5h4V19"></path></svg></div><div class="location-copy"><small data-edit="ceremonyText">Ceremonia religiosa</small><strong data-edit="ceremonyText">Parroquia San Pablo Apóstol (Balcones)</strong></div><button class="map-toggle" type="button" aria-expanded="false" aria-controls="map-ceremony"><span>Ver mapa</span><span class="map-toggle-icon">＋</span></button><div class="map-disclosure" id="map-ceremony"><div class="map-disclosure-inner"><div class="map-preview"><iframe data-src="https://www.google.com/maps?q=19.4310007%2C-102.04305&amp;hl=es&amp;t=m&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa de Parroquia San Pablo Apóstol (Balcones)"></iframe></div><a class="map-external" href="https://maps.app.goo.gl/qEZeBQNSsHdzKkzGA" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div></div></div></div><div class="location-card map-mode-toggle"><div class="location-head"><div class="location-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4h5l-.6 5.2A4 4 0 0 1 6.4 13H6a4 4 0 0 1-4-3.8L1.5 4H6Z"></path><path d="M6.5 13v5"></path><path d="M4 20h5"></path><path d="M18 4h5l-.5 5.2A4 4 0 0 1 18.5 13H18a4 4 0 0 1-4-3.8L13.5 4H18Z"></path><path d="M18.5 13v5"></path><path d="M16 20h5"></path></svg></div><div class="location-copy"><small data-edit="receptionText">Recepción</small><strong data-edit="receptionText">Salón Los Tomates (Camino a Santa Rosa #88)</strong></div><button class="map-toggle" type="button" aria-expanded="false" aria-controls="map-reception"><span>Ver mapa</span><span class="map-toggle-icon">＋</span></button><div class="map-disclosure" id="map-reception"><div class="map-disclosure-inner"><div class="map-preview"><iframe data-src="https://www.google.com/maps?q=19.3825117%2C-102.0420249&amp;hl=es&amp;t=m&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa de Salón Los Tomates (Camino a Santa Rosa #88)"></iframe></div><a class="map-external" href="https://maps.app.goo.gl/5K39QbzVGXHgtajHA" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div></div></div></div></div></section><section class="aura-music-card reveal" aria-label="Reproductor de música">
