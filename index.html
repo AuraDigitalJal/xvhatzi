@@ -825,6 +825,33 @@ body{isolation:isolate;overflow-wrap:anywhere}
   }
 }
 
+
+/* Tinte rosa muy sutil exclusivamente sobre la ventana del mapa */
+.map-preview{
+  position:relative;
+  isolation:isolate;
+}
+.map-preview::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  border-radius:inherit;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(206,166,158,.065),
+      rgba(184,120,122,.095)
+    );
+  mix-blend-mode:soft-light;
+}
+.map-preview iframe{
+  position:relative;
+  z-index:1;
+  filter:saturate(.78) contrast(.97) sepia(.025) hue-rotate(326deg);
+}
+
 </style></head><body class="theme-xv_couture event-xv design-xv"><div class="invitation-background" aria-hidden="true"><img src="assets/fondo.jpg?v=muxoqdnb" alt="" decoding="async"><div class="background-veil"></div></div><header class="hero cover-theme" data-order="classic" data-offset="0"><div class="hero-media"></div><div class="hero-overlay"></div><div class="hatzi-name-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="hero-inner"></div><div class="scroll-note">Desliza para descubrir</div></header><main class="page"><figure class="banner-media reveal banner-auto banner-main" aria-label="Banner principal"><img src="assets/banner.png?v=muxoqdnb" alt="Banner principal" loading="lazy"></figure><div class="content"><div class="banner reveal banner-horizontal " style="background-image:url('assets/banner-extra.png?v=muxoqdnb')" role="img" aria-label="Banner extra"></div><section class="section center reveal date-section"><div class="section-label">Cuenta regresiva para mis XV</div><h2 data-edit="countdownLabel"></h2><div class="countdown countdown-simple" data-date="2026-11-14T18:00"><div class="count-item"><b data-d>00</b><span>Días</span></div><div class="count-item"><b data-h>00</b><span>Horas</span></div><div class="count-item"><b data-m>00</b><span>Min</span></div><div class="count-item"><b data-s>00</b><span>Seg</span></div></div></section><section class="section reveal"><div class="section-label">Dónde será</div><h2 data-edit="locationsHeadingSize">Nos vemos aquí.</h2><div class="ornament"></div><div class="locations"><div class="location-card map-mode-toggle"><div class="location-head"><div class="location-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v4"></path><path d="M10.5 5h3"></path><path d="M5.5 10.5 12 6l6.5 4.5"></path><path d="M7.5 10.5V19"></path><path d="M16.5 10.5V19"></path><path d="M5 19h14"></path><path d="M10 19v-4.5h4V19"></path></svg></div><div class="location-copy"><small data-edit="ceremonyText">Ceremonia religiosa</small><strong data-edit="ceremonyText">Parroquia San Pablo Apóstol (Balcones)</strong></div><button class="map-toggle" type="button" aria-expanded="false" aria-controls="map-ceremony"><span>Ver mapa</span><span class="map-toggle-icon">＋</span></button><div class="map-disclosure" id="map-ceremony"><div class="map-disclosure-inner"><div class="map-preview"><iframe data-src="https://www.google.com/maps?q=19.4310007%2C-102.04305&amp;hl=es&amp;t=m&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa de Parroquia San Pablo Apóstol (Balcones)"></iframe></div><a class="map-external" href="https://maps.app.goo.gl/qEZeBQNSsHdzKkzGA" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div></div></div></div><div class="location-card map-mode-toggle"><div class="location-head"><div class="location-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4h5l-.6 5.2A4 4 0 0 1 6.4 13H6a4 4 0 0 1-4-3.8L1.5 4H6Z"></path><path d="M6.5 13v5"></path><path d="M4 20h5"></path><path d="M18 4h5l-.5 5.2A4 4 0 0 1 18.5 13H18a4 4 0 0 1-4-3.8L13.5 4H18Z"></path><path d="M18.5 13v5"></path><path d="M16 20h5"></path></svg></div><div class="location-copy"><small data-edit="receptionText">Recepción</small><strong data-edit="receptionText">Salón Los Tomates (Camino a Santa Rosa #88)</strong></div><button class="map-toggle" type="button" aria-expanded="false" aria-controls="map-reception"><span>Ver mapa</span><span class="map-toggle-icon">＋</span></button><div class="map-disclosure" id="map-reception"><div class="map-disclosure-inner"><div class="map-preview"><iframe data-src="https://www.google.com/maps?q=19.3825117%2C-102.0420249&amp;hl=es&amp;t=m&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa de Salón Los Tomates (Camino a Santa Rosa #88)"></iframe></div><a class="map-external" href="https://maps.app.goo.gl/5K39QbzVGXHgtajHA" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div></div></div></div></div></section><section class="aura-music-card reveal" aria-label="Reproductor de música">
   <div class="aura-music-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
   <div class="aura-music-copy">
